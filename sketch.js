@@ -829,16 +829,14 @@ else if(gameState === level2){
      
  }
 
- if(frameCount % 15 === 0){
-    player.addAnimation("running",playergunImg);
- }
+ 
 
 
  if (shootbutton.isHeld && bullets>0){
    move=4;
 if(angle === 5){
   if(frameCount % 5 === 0){
-   // player.addAnimation("running",playergunImg);
+    player.addAnimation("running",playergunImg);
 
      var bullet = createSprite(player.x+60,player.y+15);
       bullet.addImage(bulletImg2);
