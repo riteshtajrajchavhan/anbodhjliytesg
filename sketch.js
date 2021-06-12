@@ -194,6 +194,10 @@ wall3.visible=false;
 wall4=createSprite(windowWidth/2+5050,windowHeight/2,20,700);
 wall4.visible=false;
 
+extrawall=createSprite(windowWidth/2+4250,windowHeight/2,20,700);
+extrawall.visible=false;
+
+
   b1=createSprite(windowWidth/2+3500,windowHeight/2);
   b1.addImage(BeamImg);
   b1.scale=0.5;
@@ -731,9 +735,16 @@ e6.display();
 e7.display();
 e8.display();
 
+bird1.display(windowWidth/2+4300,windowWidth/2+5000);
+bird2.display(windowWidth/2+4300,windowWidth/2+5000);
+
 }
 
 
+if(player.x>extrawall.x){
+  bird1.display(windowWidth/2+4300,windowWidth/2+5000);
+  bird2.display(windowWidth/2+4300,windowWidth/2+5000);
+}
 
   //display the object
 
@@ -762,8 +773,7 @@ e2.display();
 e3.display();
 e4.display();
 
-bird1.display(windowWidth/2+4300,windowWidth/2+5000);
-bird2.display(windowWidth/2+4300,windowWidth/2+5000);
+
 
 }//level1 end
 
