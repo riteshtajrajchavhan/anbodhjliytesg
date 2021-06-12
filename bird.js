@@ -95,4 +95,23 @@ if(this.life.width === 10){
 
 }
 
- 
+function Time(){
+  if(occur === 1){
+    time=time+1;
+    if(time === 10){
+  
+      if(angle === 5){
+        player.addAnimation("running",playerImg);
+        }
+  
+      if(angle === 4){
+      player.addAnimation("running",playerImg2);
+      }
+  
+      time=1;
+      occur=2;
+      once=5;
+      beat=5;
+    }
+  }
+}
