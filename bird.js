@@ -3,7 +3,7 @@ class Bird{
         this.body=createSprite(x,y);
         this.body.addAnimation("running",birdImg);
         this.body.scale=1.3;
-       this.body.velocityX=-5;
+      
 
        this.life =createSprite(-300,1000,60,1);
 
@@ -17,6 +17,11 @@ display(x1,x2){
    this.life.destroy();
     this.life.destroy();
  
+    }
+
+    if(this.body.y === windowHeight/2-150){
+      this.body.velocityX=-5;
+      this.body.y = windowHeight/2-151
     }
    
     if(this.body.x < x1){
