@@ -109,7 +109,7 @@ function setup() {
    bulletgroup = createGroup();
    groundgroup = createGroup()
 
-song.loop();
+//song.loop();
 
 }
 
@@ -829,7 +829,8 @@ else if(gameState === level2){
      
  }
 
- 
+
+
 
 
  if (shootbutton.isHeld && bullets>0){
@@ -1399,6 +1400,10 @@ if (shootbutton.isHeld && bullets>0){
 
 groundgroup.get(x).velocityY=groundgroup.get(x).velocityY+7.0
 
+if(groundgroup.get(x).y > windowHeight/2+300){
+ groundgroup.get(x).destroy();
+}
+
    }
        } 
 
@@ -1434,6 +1439,14 @@ groundgroup.get(x).velocityY=groundgroup.get(x).velocityY+7.0
 
     fgroup.destroyEach();
      groundgroup.destroyEach();
+
+     e26.display();
+     e27.display();
+     e28.display();
+     e29.display();
+     e30.display();
+     e31.display();
+
     }
 
     if(player.y > windowHeight/2+300){
@@ -1444,13 +1457,23 @@ groundgroup.get(x).velocityY=groundgroup.get(x).velocityY+7.0
       health.width=9;
     }
 
-      //display object
-   e26.display();
-   e27.display();
-   e28.display();
-   e29.display();
+   
+
+if(player.x>wall10.x){
+  e26.display();
+  e27.display();
+  e28.display();
+  e29.display();
+}
+
+if(player.x>wall12.x){
   e30.display();
   e31.display();
+}
+
+      //display object
+  
+ 
    
   }//level4 end
   
