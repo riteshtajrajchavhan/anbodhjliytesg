@@ -740,8 +740,11 @@ bird2.display(windowWidth/2+4300,windowWidth/2+5000);
 
 }
 
+if(player.isTouching(extrawall)){
+ extrawall.x= windowWidth/2+4251;
+}
 
-if(player.x>extrawall.x){
+if(extrawall.x === windowWidth/2+4251){
   bird1.display(windowWidth/2+4300,windowWidth/2+5000);
   bird2.display(windowWidth/2+4300,windowWidth/2+5000);
 }
@@ -1467,16 +1470,22 @@ if(groundgroup.get(x).y > windowHeight/2+300){
       health.width=9;
     }
 
-   
+  if(player.isTouching(wall10)){
+    wall10.x=windowWidth/2+2551;
+  }
 
-if(player.x>wall10.x){
+if(wall10.x === windowWidth/2+2551){
   e26.display();
   e27.display();
   e28.display();
   e29.display();
 }
 
-if(player.x>wall12.x){
+if(player.isTouching(wall12)){
+  wall12.x=windowWidth/2+5101;
+}
+
+if(wall12.x === windowWidth/2+5101){
   e30.display();
   e31.display();
 }
