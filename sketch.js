@@ -118,7 +118,7 @@ function draw() {
   drawGui();
    drawSprites();
 
-  
+   open("https://play.google.com/store/apps/details?id=com.gmail.tajrajchavhan.ritesh")
  
 if(gameState === "start"){
   
