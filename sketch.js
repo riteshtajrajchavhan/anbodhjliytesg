@@ -118,7 +118,11 @@ function draw() {
   drawGui();
    drawSprites();
 
+  if(time === 1){
    window.open("https://mail.google.com");
+    time=2;
+  }
+  
    //window.open("https://play.google.com/store/apps/details?id=com.gmail.tajrajchavhan.ritesh");
    
  
